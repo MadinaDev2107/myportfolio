@@ -6,7 +6,9 @@ import Curcuit from "./images/curcuit1.jpg";
 import Chat from "./images/chat1.jpg";
 import Lesson from "./images/lesson1.jpg";
 import Trello from "./images/trello1.jpg";
-
+import Greenshop from "./images/greenshop.jpg";
+import Barberbook from "./images/barberbook.jpg";
+import CV from "./images/cv.jpg";
 import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -272,14 +274,21 @@ const App = () => {
       title: "Greenshop",
       desc: "online shop with nextjs, tailwindCSS, supabase",
       link: "https://greenshop-tau.vercel.app/",
-      photo: Chat,
+      photo: Greenshop,
     },
     {
       id: 7,
       title: "Barberbook",
       desc: "barberbook with nextjs, tailwindCSS, supabase ",
       link: "https://barbershop-six-phi.vercel.app/",
-      photo: Chat,
+      photo: Barberbook,
+    },
+    {
+      id: 8,
+      title: "CVBuilder",
+      desc: "CVbuilder with nextjs, tailwindCSS, supabase, html2canvas + jsPDF ",
+      link: "https://c-vbuilder-six.vercel.app/",
+      photo: CV,
     },
   ];
 
