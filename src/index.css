@@ -346,24 +346,6 @@ body {
   color: white;
   transform: translate(0, -10px) scale(1.1);
 }
-@media (max-width: 480px) {
-  .home {
-    height: 120vh;
-  }
-  .homex .iconss {
-    font-size: 28px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  .homex h1 {
-    font-size: 28px;
-  }
-  .homex .contact-btn {
-    width: 150px;
-  }
-}
 
 /* about page start */
 body {
@@ -464,28 +446,7 @@ body {
 .btx button:hover {
   background-color: rgb(255, 0, 80, 0.8);
 }
-@media (max-width: 480px) {
-  .about-container {
-    height: 120vh;
-    margin-top: 50px;
-  }
-  .p1 {
-    display: none;
-  }
-  .about_me {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: start;
-    justify-content: center;
-    gap: 50px;
-    font-family: serif;
-    padding: 20px;
-  }
-  .about-me-text p {
-    width: 380px;
-  }
-}
+
 /* about page ended */
 
 /* skills page starts */
@@ -801,17 +762,7 @@ body {
   color: white;
 }
 
-@media (max-width: 480px) {
-  .bottom-nav {
-    gap: 20px;
-    padding: 8px 20px;
-  }
-  .bottom-nav__item {
-    font-size: 20px;
-    width: 40px;
-    height: 40px;
-  }
-}
+/* Mobile versiya */
 
 @media (max-width: 768px) {
   .sidebar {
@@ -844,5 +795,55 @@ body {
 @media (min-width: 769px) {
   .bottom-nav {
     display: none !important;
+  }
+}
+@media (max-width: 480px) {
+  .bottom-nav {
+    gap: 20px;
+    padding: 8px 20px;
+  }
+  .bottom-nav__item {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  .home {
+    height: 120vh;
+  }
+  .homex .iconss {
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .homex h1 {
+    font-size: 28px;
+  }
+  .homex .contact-btn {
+    width: 150px;
+  }
+  .about-container {
+    height: 120vh;
+    margin-top: 50px;
+  }
+  .p1 {
+    display: none;
+  }
+  .about_me {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+    gap: 50px;
+    font-family: serif;
+    padding: 20px;
+  }
+  .about-me-text p {
+    width: 380px;
+  }
+  .skills-icons-section {
+    height: 120vh;
   }
 }
