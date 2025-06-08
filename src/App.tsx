@@ -9,7 +9,7 @@ import Trello from "./images/trello1.jpg";
 import Greenshop from "./images/greenshop.jpg";
 import Barberbook from "./images/barberbook.jpg";
 import CV from "./images/cv.jpg";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -40,6 +40,7 @@ import {
 import BottomNav from "./BottomNav";
 
 const App = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -108,22 +109,21 @@ const App = () => {
 
     emailjs
       .send(
-        "service_ewdtjhu",
-        "template_pnmkrh8",
-        {
-          user_name: formData.name,
-          user_email: formData.email,
-          message: formData.message,
-        },
-        "MCayC2nd7r9e7awd-"
+        "service_0nnhonf",
+        "template_xyih3nz",
+        formData,
+        "fJJ0hok8CgthLbQwP"
       )
-      .then(() => {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch(() => {
-        alert("Failed to send the message. Please try again later.");
-      });
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.log(error);
+          alert("Failed to send the message. Please try again later.");
+        }
+      );
   };
 
   const socialLinks = [
@@ -291,8 +291,6 @@ const App = () => {
       photo: CV,
     },
   ];
-
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
@@ -528,7 +526,7 @@ const App = () => {
             <div className="form-group">
               <label htmlFor="email">Email:</label>
               <input
-                type="emaigl"
+                type="email"
                 id="email"
                 name="email"
                 placeholder="Your Email Address"
