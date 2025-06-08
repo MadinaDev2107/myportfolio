@@ -393,50 +393,53 @@ const App = () => {
                   <h2>About Me</h2>
                 </motion.div>
 
-                <div className="about_me">
-                  <div className="about-me-text">
-                    <p>
-                      Hi, I'm Madina Davlatova, a Full stack developer with a
-                      focus on Next.js/React + Python development. I love
-                      creating web applications that solve everyday problems,
-                      and I'm always curious to learn more when it comes to new
-                      technologies and creative coding.
-                    </p>
+                <div>
+                  {" "}
+                  <div className="about_me">
+                    <div className="about-me-text">
+                      <p>
+                        Hi, I'm Madina Davlatova, a Full stack developer with a
+                        focus on Next.js/React + Python development. I love
+                        creating web applications that solve everyday problems,
+                        and I'm always curious to learn more when it comes to
+                        new technologies and creative coding.
+                      </p>
 
-                    <p className="p1">
-                      When I'm not coding, you can usually find me watching
-                      movies, reading psychological and personal growth books,
-                      or exploring new places. Let's connect and create
-                      something amazing together!
-                    </p>
+                      <p className="p1">
+                        When I'm not coding, you can usually find me watching
+                        movies, reading psychological and personal growth books,
+                        or exploring new places. Let's connect and create
+                        something amazing together!
+                      </p>
+                    </div>
+                    <div className="about-image">
+                      <img
+                        src={Logo}
+                        alt="Profile"
+                        className="img-fluid rounded"
+                      />
+                    </div>
                   </div>
-                  <div className="about-image">
-                    <img
-                      src={Logo}
-                      alt="Profile"
-                      className="img-fluid rounded"
-                    />
-                  </div>
-                </div>
-                <div className="btx">
-                  <p>More about me</p>
-                  <a
-                    href="/resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      animate={{ rotate: [0, -20, 20, -20, 20, 0] }}
-                      transition={{
-                        duration: 2,
-                        repeat: 1,
-                      }}
+                  <div className="btx">
+                    <p>More about me</p>
+                    <a
+                      href="/resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      Resume
-                    </motion.button>
-                  </a>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        animate={{ rotate: [0, -20, 20, -20, 20, 0] }}
+                        transition={{
+                          duration: 2,
+                          repeat: 1,
+                        }}
+                      >
+                        Resume
+                      </motion.button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

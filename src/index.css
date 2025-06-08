@@ -733,7 +733,7 @@ body {
 }
 
 .bottom-nav .nav-button i {
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 5px;
   background: #444;
   padding: 12px;
@@ -763,14 +763,21 @@ body {
 }
 
 /* Mobile versiya */
-
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .pages {
+    width: 80%;
+  }
+}
+/* PLANSHET VA MOBIL (768pxgacha) */
+@media (max-width: 820px) {
   .sidebar {
     display: none;
   }
+
   .pages {
     margin-left: 0;
   }
+
   .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -781,35 +788,76 @@ body {
     justify-content: space-around;
     padding: 10px 0;
     z-index: 1000;
+    gap: 15px;
   }
 
   .bottom-nav__item {
-    font-size: 20px;
+    font-size: 18px;
     color: #888;
   }
 
   .bottom-nav__item.active {
     color: #000;
   }
+  .home {
+    margin-bottom: 100px;
+  }
+  .about_me {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: start;
+    text-align: start;
+    gap: 20px;
+    font-family: serif;
+    padding: 10px;
+  }
+  .about-text {
+    height: 100vh;
+  }
+
+  .about-me-text p {
+    width: 100%;
+    max-width: 700px;
+  }
+  .p1 {
+    display: none;
+  }
+  .about-image {
+    width: 200px;
+    height: 200px;
+  }
 }
-@media (min-width: 769px) {
+
+/* FAQAT KATTA EKRANLAR (769px dan katta) */
+@media (min-width: 820px) {
   .bottom-nav {
     display: none !important;
   }
 }
+
+/* FAQAT MOBIL (480pxgacha) */
 @media (max-width: 480px) {
+  .icon {
+    font-size: 60px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
   .bottom-nav {
     gap: 20px;
     padding: 8px 20px;
   }
+
   .bottom-nav__item {
     font-size: 20px;
     width: 40px;
     height: 40px;
   }
+
   .home {
     height: 120vh;
   }
+
   .homex .iconss {
     font-size: 28px;
     display: flex;
@@ -817,32 +865,44 @@ body {
     gap: 15px;
     margin-top: 20px;
   }
+
   .homex h1 {
     font-size: 28px;
   }
+
   .homex .contact-btn {
     width: 150px;
   }
+
   .about-container {
     height: 120vh;
     margin-top: 50px;
   }
+
   .p1 {
     display: none;
   }
+
   .about_me {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    text-align: start;
     justify-content: center;
+    text-align: start;
     gap: 50px;
     font-family: serif;
     padding: 20px;
   }
-  .about-me-text p {
-    width: 380px;
+  .about-image {
+    width: 200px;
+    height: 200px;
   }
+  .about-me-text p {
+    width: 100%;
+    font-size: 16px;
+    max-width: 380px;
+  }
+
   .skills-icons-section {
     height: 120vh;
   }
